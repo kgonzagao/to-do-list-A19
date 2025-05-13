@@ -25,23 +25,13 @@ Aplicación frontend desarrollada con Angular 19 para gestionar una lista de tar
 - npm v9+ o yarn
 - Angular CLI v19+
 
-## Estructura del proyecto
-
-src/
-├── app/
-│   ├── components/   # Componentes Standalone
-│   ├── services/     # Servicios
-│   ├── models/       # Interfaces
-│   └── routes.ts     # Configuración de rutas
-├── assets/
-└── styles.css        # Estilos globales
-
 
 ## Configuración
 - Editar src/app/services/task.service.ts:
 
 ```typescript
 private apiUrl = 'http://localhost:8080/api/tasks'; // Cambiar por tu endpoint
+```
 
 ## Licencia
 Este proyecto está bajo la Licencia Apache 2.0.
