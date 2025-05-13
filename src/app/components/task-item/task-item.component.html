@@ -1,0 +1,24 @@
+<div class="task-card" [class.completed]="task.completed">
+  <div class="task-header">
+    <h3>{{ task.title }}</h3>
+    <div class="task-actions">
+      <input
+        type="checkbox"
+        [checked]="task.completed"
+        (change)="onToggleComplete()"
+      >
+      <button (click)="onDelete()" class="delete-btn">🗑️</button>
+    </div>
+  </div>
+
+  @if (task.description) {
+    <p class="task-description">{{ task.description }}</p>
+  }
+
+  <div class="task-meta">
+    @if (task.dueDate) {
+      <span>Vence: {{ task.dueDate | date }}</span>
+    }
+    <span>Creada: {{ task.createdAt | date }}</span>
+  </div>
+</div>

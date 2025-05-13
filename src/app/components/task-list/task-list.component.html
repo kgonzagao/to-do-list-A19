@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>Lista de Tareas</h1>
+
+  <app-task-form (taskCreated)="onTaskCreated()"></app-task-form>
+
+  <div class="task-container">
+    @for (task of tasks; track task.id) {
+      <app-task-item
+        [task]="task"
+        (taskDeleted)="onTaskDeleted($event)"
+      ></app-task-item>
+    } @empty {
+      <p>No hay tareas disponibles</p>
+    }
+  </div>
+</div>
